@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>bifromq.plugin</groupId>
+    <artifactId>plugin-parent</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- maven.plugin.version-->
+        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <maven.assembly.plugin.version>3.4.1</maven.assembly.plugin.version>
+        <maven.resources.plugin.version>3.2.0</maven.resources.plugin.version>
+        <!-- build properties -->
+        <java.source.version>17</java.source.version>
+        <java.target.version>17</java.target.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- bifromq properties -->
+        <bifromq-plugin-auth-provider.version>1.0.0-SNAPSHOT</bifromq-plugin-auth-provider.version>
+        <!-- third party properties -->
+        <caffeine.cache.version>3.1.5</caffeine.cache.version>
+        <jwks-rsa.version>0.21.3</jwks-rsa.version>
+        <java-jwt.version>3.19.4</java-jwt.version>
+        <lombok.version>1.18.26</lombok.version>
+        <httpclient.version>4.5.13</httpclient.version>
+        <logback-classic.version>1.2.9</logback-classic.version>
+        <jackson-core.version>2.15.2</jackson-core.version>
+        <jackson-databind.version>2.15.2</jackson-databind.version>
+        <jackson-dataformat-yaml.version>2.15.2</jackson-dataformat-yaml.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <netty-all.version>4.1.10.Final</netty-all.version>
+        <HikariCP.version>5.0.1</HikariCP.version>
+        <mysql-connector-java.version>8.0.27</mysql-connector-java.version>
+        <jbcrypt.version>0.4</jbcrypt.version>
+        <commons-cli.version>1.5.0</commons-cli.version>
+    </properties>
+
+    <modules>
+        <module>plugin</module>
+        <module>auth-service</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>bifromq.plugin</groupId>
+                <artifactId>plugin</artifactId>
+                <version>${project.parent}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${java.source.version}</source>
+                        <target>${java.target.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven.assembly.plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven.resources.plugin.version}</version>
+                    <configuration>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

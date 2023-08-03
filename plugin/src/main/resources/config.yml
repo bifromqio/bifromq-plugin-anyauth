@@ -1,0 +1,10 @@
+tenantId: ${TENANTID}
+device:
+  authUrl: ${AUTH_URL}
+  checkUrl: ${CHECK_URL}
+auth0:
+  domain: ${AUTH0_DOMAIN}
+wechat:
+  appId: ${APP_ID}
+  appSecret: ${APP_SECRET}
+  requestUrl: https://api.weixin.qq.com/sns/jscode2session?appid=
