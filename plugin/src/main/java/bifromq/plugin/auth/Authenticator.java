@@ -102,9 +102,9 @@ public class Authenticator {
 
     private CompletableFuture<MQTT3AuthResult> deviceVerify(String username, String password) {
         return CompletableFuture.supplyAsync(() -> {
-            HttpPost post = new HttpPost(ConfigUtils.getAuthProviderConfig().getDevice().getAuthUrl());
             MQTT3AuthResult.Builder builder = MQTT3AuthResult.newBuilder();
             try {
+                HttpPost post = new HttpPost(ConfigUtils.getAuthProviderConfig().getDevice().getAuthUrl());
                 StringEntity entity = new StringEntity(String.format("{\"username\":\"%s\", \"password\":\"%s\"}",
                         username, password));
                 post.setEntity(entity);

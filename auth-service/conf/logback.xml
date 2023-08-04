@@ -16,22 +16,6 @@
         </filter>
     </appender>
 
-    <appender name="eventLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${logDir}/event.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${logDir}/event.%d{yyyy-MM-dd_HH}.log</fileNamePattern>
-            <maxHistory>72</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>${eventPattern}</pattern>
-        </encoder>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>DEBUG</level>
-            <onMatch>ACCEPT</onMatch>
-            <onMismatch>DENY</onMismatch>
-        </filter>
-    </appender>
-
     <appender name="traceLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${logDir}/trace.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
