@@ -1,4 +1,4 @@
-package bifromq.plugin.auth.auth;
+package bifromq.plugin.auth.checker;
 
 import bifromq.plugin.auth.model.UserAction;
 import bifromq.plugin.auth.storage.IAuthStorage;
@@ -37,9 +37,6 @@ public class Authorizer {
     }
 
     private boolean matchRule(String[] topicLevels, String[] ruleLevels) {
-        if (ruleLevels.length < topicLevels.length) {
-            return false;
-        }
         for (int level = 0; level < ruleLevels.length; level++) {
             String eachLevel = ruleLevels[level];
             if (!eachLevel.equals(single) && !eachLevel.equals(multiple)) {
@@ -51,6 +48,9 @@ public class Authorizer {
             } else if (eachLevel.equals(multiple)) {
                 return true;
             }
+        }
+        if (topicLevels.length > ruleLevels.length) {
+            return false;
         }
         return true;
     }

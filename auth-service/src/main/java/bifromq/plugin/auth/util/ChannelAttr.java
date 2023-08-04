@@ -1,7 +1,7 @@
 package bifromq.plugin.auth.util;
 
-import bifromq.plugin.auth.auth.Authenticator;
-import bifromq.plugin.auth.auth.Authorizer;
+import bifromq.plugin.auth.checker.Authenticator;
+import bifromq.plugin.auth.checker.Authorizer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.netty.util.AttributeKey;
 

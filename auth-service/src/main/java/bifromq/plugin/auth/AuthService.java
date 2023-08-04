@@ -1,7 +1,7 @@
 package bifromq.plugin.auth;
 
-import bifromq.plugin.auth.auth.Authenticator;
-import bifromq.plugin.auth.auth.Authorizer;
+import bifromq.plugin.auth.checker.Authenticator;
+import bifromq.plugin.auth.checker.Authorizer;
 import bifromq.plugin.auth.config.AuthConfig;
 import bifromq.plugin.auth.handler.AuthHandler;
 import bifromq.plugin.auth.storage.IAuthStorage;

@@ -1,7 +1,7 @@
 package bifromq.plugin.auth.handler;
 
-import bifromq.plugin.auth.auth.Authenticator;
-import bifromq.plugin.auth.auth.Authorizer;
+import bifromq.plugin.auth.checker.Authenticator;
+import bifromq.plugin.auth.checker.Authorizer;
 import bifromq.plugin.auth.model.UserAction;
 import bifromq.plugin.auth.util.ChannelAttr;
 import com.fasterxml.jackson.databind.JsonNode;

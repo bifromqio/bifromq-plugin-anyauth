@@ -1,4 +1,4 @@
-package bifromq.plugin.auth.auth;
+package bifromq.plugin.auth.checker;
 
 import bifromq.plugin.auth.model.Credential;
 import bifromq.plugin.auth.storage.IAuthStorage;

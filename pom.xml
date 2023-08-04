@@ -36,6 +36,8 @@
         <mysql-connector-java.version>8.0.27</mysql-connector-java.version>
         <jbcrypt.version>0.4</jbcrypt.version>
         <commons-cli.version>1.5.0</commons-cli.version>
+        <mockito-core.version>4.6.0</mockito-core.version>
+        <testng.version>7.8.0</testng.version>
     </properties>
 
     <modules>
