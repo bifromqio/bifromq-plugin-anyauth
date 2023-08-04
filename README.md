@@ -40,7 +40,7 @@ done by other services, which is omitted here.
 ![wechat-authn.png](docs%2Fimg%2Fwechat-authn.png)
 
 ## Auth Plugin Authorization Workflow
-For authorization, the project adopts Access Control List ([[ACL](https://en.wikipedia.org/wiki/Access-control_list)]).
+For authorization, the project adopts Access Control List ([ACL](https://en.wikipedia.org/wiki/Access-control_list)).
 Each action, such as publishing and subscription, has its own permission rule. For simplicity, the permissions are based 
 on each user rather than the client. Therefore, clients under the same user share the same behavior.
 
