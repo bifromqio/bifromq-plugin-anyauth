@@ -8,7 +8,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class Authorizer {
     private String single = "+";
-    public String multiple = "#";
+    private String multiple = "#";
     private IAuthStorage storage;
 
     public Authorizer(IAuthStorage storage) {

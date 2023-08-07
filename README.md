@@ -13,6 +13,21 @@ In order to reach the goal, not only should IoT devices connect to BifroMQ, but 
 media accounts, making the app more accessible.
 
 Also, the auth plugin should check the action permission for coming publishing and subscription messages.
+
+## Quick Start
+In the project directory, run the maven command:
+```shell
+mvn clean package
+```
+There will be 2 outputs, i.e. `auth-service-${PROJECT_VERSION}.tar.gz` and `auth-plugin-${PROJECT_VERSION}.jar`.
+The first one is used for customized auth service including authentication and authorization.
+The second one should be put in BifroMQ plugin directory. Also, auth provider fully qualified name(FQN) 
+in BifrMQ configuration file should be included, which is demonstrated in 
+[Plugin Practice and Notice in BifroMQ](https://bifromq.io/docs/plugin/plugin_practice/).
+
+Extract the `auth-service-${PROJECT_VERSION}.tar.gz`, `cd auth-service-${PROJECT_VERSION}` 
+and `./bin/auth-service.sh start` to start the auth-service.
+
 ## Auth Plugin Authentication Workflow
 Based on the previous discussion, the login process should be done based on the client identity. In the project, WeChat 
 and Auth0 authentication is supported. Additionally, it can be extended to support more social media accounts. 
@@ -25,8 +40,8 @@ The process for each identity authentication is demonstrated as follows:
 ![device-authn.png](docs%2Fimg%2Fdevice-authn.png)
 
 As shown in the above figure, the customized auth service has to query users' credentials from database. In the project,
-the interface `IAuthStorage` is provided and `MySql` is implemented based on the interface. One can also extend the 
-implementation, e.g. redis and mongo.
+the interface `IAuthStorage` is provided and `MySqlAuthStorage` is implemented based on the interface. One can also 
+extend the implementation, e.g. redis and mongo.
 
 Noticing, there is a implicit prerequisite, i.e. the credentials have been store in the database in advance. It can be 
 done by other services, which is omitted here.
