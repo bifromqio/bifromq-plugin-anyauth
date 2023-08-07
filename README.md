@@ -63,8 +63,8 @@ In the project, `MySql` is adopted for storing users' permissions in the followi
 
 | username | pubAcl | subAcl |
 |----------|--------|--------|
-| "dev"    | "a/b, a/+/c"   | "a/#"  |
-| "test"    | "+/b""   | "#"   |
+| "dev"    | "a/b, a/+/c"  | "a/#"  |
+| "test"    | "+/b"   | "#"   |
 
 In `pubAcl` and `subAcl`, the rules are comma seperated. Also, being similar to authentication, the rules should be 
 stored in advance by other services.
