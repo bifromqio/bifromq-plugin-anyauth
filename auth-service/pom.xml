@@ -86,7 +86,7 @@
                     <finalName>auth-service-${project.parent.version}</finalName>
                     <archive>
                         <manifest>
-                            <mainClass>bifromq.plugin.auth.AuthService</mainClass>
+                            <mainClass>bifromq.auth.service.AuthService</mainClass>
                         </manifest>
                     </archive>
                     <descriptors>

@@ -14,7 +14,7 @@
 
     <properties>
         <plugin.id>bifromq-plugin</plugin.id>
-        <plugin.class>bifromq.plugin.AuthPlugin</plugin.class>
+        <plugin.class>bifromq.plugin.auth.AuthPlugin</plugin.class>
     </properties>
 
     <dependencies>

@@ -3,16 +3,19 @@
 ## What is BifroMQ plugin
 [BifroMQ's plugin](https://bifromq.io/docs/plugin/plugin/) mechanism allows users to integrate custom business logic 
 with BifroMQ at runtime. Currently, BifroMQ defines 3 types of Plugin interfaces, i.e. Auth Provider, 
-Event Collector and Setting Provider.
+Event Collector and Setting Provider. This repository implements auth provider.
 
-This repository provides an example for BifroMQ auth provider development. It assumes a use case where users can log in 
-to an app through social media accounts such as GMail and WeChat, and receive notifications when messages are published 
-through BifroMQ.
+## What does the plugin do
+The plugin assumes a use case where users can log in to an app through social media accounts such as GMail and WeChat, 
+and control smart appliances remotely or receive notifications via the app. The scenario can be depicted as the following 
+picture.
+![smart-home.png](docs%2Fimg%2Fsmart-home.png)
 
-In order to reach the goal, not only should IoT devices connect to BifroMQ, but the users do through their social 
-media accounts, making the app more accessible.
+For the scenario mentioned above, both application users and appliances essentially connect to BifroMQ with distinct 
+roles. Meanwhile, it can be much easier and more convenient for users to connect to BifroMQ with social accounts.
 
-Also, the auth plugin should check the action permission for coming publishing and subscription messages.
+In addition to do the **authentication**, the auth plugin should check the action permission for coming publishing and 
+subscription messages, i.e. **authorization**.
 
 ## Quick Start
 In the project directory, run the maven command:
