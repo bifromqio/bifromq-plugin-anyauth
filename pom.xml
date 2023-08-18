@@ -41,7 +41,7 @@
     </properties>
 
     <modules>
-        <module>plugin</module>
+        <module>auth-plugin</module>
         <module>auth-service</module>
     </modules>
 
