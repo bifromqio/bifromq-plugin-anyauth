@@ -9,6 +9,7 @@ Event Collector and Setting Provider. This repository implements auth provider.
 The plugin assumes a use case where users can log in to an app through social media accounts such as GMail and WeChat, 
 and control smart appliances remotely or receive notifications via the app. The scenario can be depicted as the following 
 picture.
+
 ![smart-home.png](docs%2Fimg%2Fsmart-home.png)
 
 For the scenario mentioned above, both application users and appliances essentially connect to BifroMQ with distinct 
