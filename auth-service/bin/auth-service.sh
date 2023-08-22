@@ -15,10 +15,10 @@ COMMAND=$1
 shift
 
 if [ $COMMAND = "start" ]; then
-  exec "$BASE_DIR/bin/auth-start.sh" -c bifromq.plugin.auth.AuthService -f config.yml "$@"
+  exec "$BASE_DIR/bin/auth-start.sh" -c bifromq.auth.service.AuthService -f config.yml "$@"
 elif [ $COMMAND = "stop" ]; then
-  exec "$BASE_DIR/bin/auth-stop.sh" bifromq.plugin.auth.AuthService
+  exec "$BASE_DIR/bin/auth-stop.sh" bifromq.auth.service.AuthService
 elif [ $COMMAND = "restart" ]; then
-  sh "$BASE_DIR/bin/auth-stop.sh" bifromq.plugin.auth.AuthService
-  "$BASE_DIR/bin/auth-start.sh" -c bifromq.plugin.auth.AuthService -f config.yml "$@"
+  sh "$BASE_DIR/bin/auth-stop.sh" bifromq.auth.service.AuthService
+  "$BASE_DIR/bin/auth-start.sh" -c bifromq.auth.service.AuthService -f config.yml "$@"
 fi
