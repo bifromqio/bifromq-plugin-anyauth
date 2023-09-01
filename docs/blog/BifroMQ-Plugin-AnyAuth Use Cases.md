@@ -1,7 +1,7 @@
 # BifroMQ-Plugin-AnyAuth Tutorial
 
 ## What is BifroMQ-Plugin-AuthAny
-<video controls width="640" height="360">
-    <source src="video_url.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+
+
+https://github.com/Gujiawei-Edinburgh/bifromq-plugin-anyAuth/assets/55412783/df9f9009-e96f-4c97-b25a-aa399196fbd9
+
