@@ -1,4 +1,4 @@
-package bifromq.plugin.auth.config;
+package bifromq.auth.plugin.config;
 
 import lombok.Data;
 

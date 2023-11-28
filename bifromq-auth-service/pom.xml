@@ -9,13 +9,13 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>auth-service</artifactId>
+    <artifactId>bifromq-auth-service</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.10.Final</version>
+            <version>${netty.all.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

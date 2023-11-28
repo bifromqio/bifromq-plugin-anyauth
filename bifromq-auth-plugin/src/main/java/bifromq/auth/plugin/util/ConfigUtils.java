@@ -1,6 +1,6 @@
-package bifromq.plugin.auth.util;
+package bifromq.auth.plugin.util;
 
-import bifromq.plugin.auth.config.AuthProviderConfig;
+import bifromq.auth.plugin.config.AuthProviderConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;

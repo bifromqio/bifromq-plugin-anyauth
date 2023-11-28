@@ -1,6 +1,6 @@
-package bifromq.plugin.auth.worker;
+package bifromq.auth.plugin.worker;
 
-import bifromq.plugin.auth.util.ConfigUtils;
+import bifromq.auth.plugin.util.ConfigUtils;
 import com.auth0.jwk.Jwk;
 import com.auth0.jwk.JwkProvider;
 import com.auth0.jwk.UrlJwkProvider;

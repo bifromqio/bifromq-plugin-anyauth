@@ -1,6 +1,6 @@
-package bifromq.plugin.auth.worker;
+package bifromq.auth.plugin.worker;
 
-import bifromq.plugin.auth.util.ConfigUtils;
+import bifromq.auth.plugin.util.ConfigUtils;
 import com.baidu.bifromq.plugin.authprovider.type.MQTTAction;
 import com.baidu.bifromq.plugin.authprovider.type.PubAction;
 import com.baidu.bifromq.plugin.authprovider.type.SubAction;

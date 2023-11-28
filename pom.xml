@@ -19,8 +19,9 @@
         <java.target.version>17</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- bifromq properties -->
-        <bifromq-plugin-auth-provider.version>1.0.0-SNAPSHOT</bifromq-plugin-auth-provider.version>
+        <bifromq-plugin-auth-provider.version>2.0.1-SNAPSHOT</bifromq-plugin-auth-provider.version>
         <!-- third party properties -->
+        <netty.all.version>4.1.10.Final</netty.all.version>
         <caffeine.cache.version>3.1.5</caffeine.cache.version>
         <jwks-rsa.version>0.21.3</jwks-rsa.version>
         <java-jwt.version>3.19.4</java-jwt.version>
@@ -41,19 +42,9 @@
     </properties>
 
     <modules>
-        <module>auth-plugin</module>
-        <module>auth-service</module>
+        <module>bifromq-auth-plugin</module>
+        <module>bifromq-auth-service</module>
     </modules>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>bifromq.plugin</groupId>
-                <artifactId>plugin</artifactId>
-                <version>${project.parent}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <pluginManagement>

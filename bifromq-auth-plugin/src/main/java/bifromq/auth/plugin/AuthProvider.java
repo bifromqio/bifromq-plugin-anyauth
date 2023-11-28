@@ -1,7 +1,7 @@
-package bifromq.plugin.auth;
+package bifromq.auth.plugin;
 
-import bifromq.plugin.auth.worker.Authenticator;
-import bifromq.plugin.auth.worker.Authorizer;
+import bifromq.auth.plugin.worker.Authenticator;
+import bifromq.auth.plugin.worker.Authorizer;
 import com.baidu.bifromq.plugin.authprovider.IAuthProvider;
 import com.baidu.bifromq.plugin.authprovider.type.MQTT3AuthData;
 import com.baidu.bifromq.plugin.authprovider.type.MQTT3AuthResult;

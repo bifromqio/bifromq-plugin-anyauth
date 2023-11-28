@@ -10,11 +10,11 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>auth-plugin</artifactId>
+    <artifactId>bifromq-auth-plugin</artifactId>
 
     <properties>
         <plugin.id>bifromq-plugin</plugin.id>
-        <plugin.class>bifromq.plugin.auth.AuthPlugin</plugin.class>
+        <plugin.class>bifromq.auth.plugin.AuthPlugin</plugin.class>
     </properties>
 
     <dependencies>

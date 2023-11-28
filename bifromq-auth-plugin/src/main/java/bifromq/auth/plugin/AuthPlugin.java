@@ -1,4 +1,4 @@
-package bifromq.plugin.auth;
+package bifromq.auth.plugin;
 
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
