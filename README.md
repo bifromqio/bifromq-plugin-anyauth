@@ -26,7 +26,7 @@ mvn clean package
 There will be 2 outputs, i.e. `auth-service-${PROJECT_VERSION}.tar.gz` and `auth-plugin-${PROJECT_VERSION}.jar`.
 The first one is used for customized auth service including authentication and authorization.
 The second one should be put in BifroMQ plugin directory. Also, auth provider fully qualified name(FQN) 
-in BifrMQ configuration file should be included, which is demonstrated in 
+in BifroMQ configuration file should be included, which is demonstrated in 
 [Plugin Practice and Notice in BifroMQ](https://bifromq.io/docs/plugin/plugin_practice/).
 
 Extract the `auth-service-${PROJECT_VERSION}.tar.gz`, `cd auth-service-${PROJECT_VERSION}` 
