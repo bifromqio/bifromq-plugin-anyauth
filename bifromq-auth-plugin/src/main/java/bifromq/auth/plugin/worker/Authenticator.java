@@ -15,7 +15,6 @@ import com.baidu.bifromq.plugin.authprovider.type.Ok;
 import com.baidu.bifromq.plugin.authprovider.type.Reject;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -23,6 +22,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.security.interfaces.RSAPublicKey;
@@ -30,8 +31,8 @@ import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
-@Slf4j
 public class Authenticator {
+    private static final Logger log = LoggerFactory.getLogger(Authenticator.class);
     private String domain = ConfigUtils.getAuthProviderConfig().getAuth0().getDomain();
     private String tenantId = ConfigUtils.getAuthProviderConfig().getTenantId();
     private final ObjectMapper objectMapper;

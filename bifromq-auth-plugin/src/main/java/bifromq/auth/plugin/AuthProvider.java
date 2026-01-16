@@ -8,7 +8,6 @@ import com.baidu.bifromq.plugin.authprovider.type.MQTT3AuthResult;
 import com.baidu.bifromq.plugin.authprovider.type.MQTTAction;
 import com.baidu.bifromq.type.ClientInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.pf4j.Extension;
@@ -18,7 +17,6 @@ import java.util.concurrent.CompletableFuture;
 import static com.baidu.bifromq.type.MQTTClientInfoConstants.MQTT_USER_ID_KEY;
 
 @Extension
-@Slf4j
 public final class AuthProvider implements IAuthProvider {
     private Authenticator authenticator;
     private Authorizer authorizer;

@@ -7,19 +7,20 @@ import com.baidu.bifromq.plugin.authprovider.type.SubAction;
 import com.baidu.bifromq.plugin.authprovider.type.UnsubAction;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 
-@Slf4j
 public class Authorizer {
+    private static final Logger log = LoggerFactory.getLogger(Authorizer.class);
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
 

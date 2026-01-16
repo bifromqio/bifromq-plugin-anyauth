@@ -19,7 +19,6 @@ import io.netty.channel.ChannelPipeline;
 import io.netty.channel.EventLoopGroup;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
@@ -29,9 +28,11 @@ import org.apache.commons.cli.Options;
 
 import java.io.File;
 import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class AuthService {
+    private static final Logger log = LoggerFactory.getLogger(AuthService.class);
     static {
         Thread.setDefaultUncaughtExceptionHandler(
                 (t, e) -> log.error("Caught an exception in thread[{}]", t.getName(), e));

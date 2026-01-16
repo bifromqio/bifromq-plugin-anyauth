@@ -2,12 +2,10 @@ package bifromq.auth.service.checker;
 
 import bifromq.auth.service.model.Credential;
 import bifromq.auth.service.storage.IAuthStorage;
-import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 
 import java.util.concurrent.CompletableFuture;
 
-@Slf4j
 public class Authenticator {
     private IAuthStorage storage;
 

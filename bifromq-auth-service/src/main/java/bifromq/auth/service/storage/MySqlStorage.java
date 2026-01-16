@@ -7,7 +7,8 @@ import com.github.benmanes.caffeine.cache.AsyncLoadingCache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,8 +20,8 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 public class MySqlStorage implements IAuthStorage {
+    private static final Logger log = LoggerFactory.getLogger(MySqlStorage.class);
     private final HikariDataSource ds;
     private final AsyncLoadingCache<String, Optional<Credential>> userCache = Caffeine.newBuilder()
             .maximumSize(100)
